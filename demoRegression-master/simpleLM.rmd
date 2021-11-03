@@ -74,6 +74,8 @@ The correlation coefficient
 
 ## Conclusion 
 
+
+
 Chest had adjust r squared score of 0.7869 while neck had an adjust r squared score of 0.7476
 
 
