@@ -9,6 +9,12 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+
+## Introduction 
+
+We are comparing the variables chest and neck of a bear to see what variable is better at determining length. 
+
+
 ## make a simple regression model
 
 ```{r}
@@ -23,6 +29,10 @@ plot(LENGTH~NECK,data=bears)
 abline(simp)
 summary.lm(simp)
 ```
+
+Neck as a variable for determining a bears length had adjusted r square score of 0.7476.
+
+The scatter plot shows that neck size goes up, length does as well as is a good predictor of length.
 
 ## now predict the length of a bear who has a neck of 17, 22 and 26
 
@@ -48,3 +58,23 @@ plot(LENGTH~CHEST,data=bears)
 abline(simp)
 summary.lm(simp)
 ```
+
+Chest as a variable for determining a bears length had adjusted r square of 0.7869
+
+The scatter plot shows that chest size goes up, length does as well, thus necks size is a good indicator.
+
+## Numerical Summary 
+
+
+```{r}st
+cor(bears$LENGTH,bears$CHEST)
+```
+
+The correlation coefficient 
+
+## Conclusion 
+
+Chest had adjust r squared score of 0.7869 while neck had an adjust r squared score of 0.7476
+
+
+Chest is a better predictor of length because the adjusted r-squared of the fit for chest was larger than neck. 
